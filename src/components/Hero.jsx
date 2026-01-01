@@ -4,10 +4,19 @@ import './Hero.css';
 const Hero = () => {
   const typingRef = useRef(null);
   const [typedText, setTypedText] = useState('');
-  const strings = ['Pythonist', 'Developer', 'Fast Learner'];
+  const strings = [
+    'Backend Engineer',
+    'Problem Solver',
+    'Code Architect',
+    'Tech Enthusiast',
+    'Data Engineer',
+    'Full Stack Developer',
+    'System Designer',
+    'Innovative Thinker'
+  ];
   const [currentStringIndex, setCurrentStringIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(80);
+  const [typingSpeed, setTypingSpeed] = useState(120);
 
   useEffect(() => {
     const type = () => {
@@ -16,16 +25,25 @@ const Hero = () => {
       if (!isDeleting) {
         if (typedText.length < current.length) {
           setTypedText(current.substring(0, typedText.length + 1));
-          setTypingSpeed(80);
+          // Variable speed: slower at start, faster in middle, slower at end
+          const progress = typedText.length / current.length;
+          if (progress < 0.3) {
+            setTypingSpeed(150); // Slower at start
+          } else if (progress > 0.7) {
+            setTypingSpeed(100); // Slower at end
+          } else {
+            setTypingSpeed(120); // Faster in middle
+          }
         } else {
-          setTimeout(() => setIsDeleting(true), 2000);
+          setTimeout(() => setIsDeleting(true), 2500);
         }
       } else {
         if (typedText.length > 0) {
           setTypedText(current.substring(0, typedText.length - 1));
-          setTypingSpeed(40);
+          setTypingSpeed(60); // Fast deletion
         } else {
           setIsDeleting(false);
+          setTypingSpeed(200); // Pause before next word
           setCurrentStringIndex((prev) => (prev + 1) % strings.length);
         }
       }
@@ -33,7 +51,7 @@ const Hero = () => {
 
     const timer = setTimeout(type, typingSpeed);
     return () => clearTimeout(timer);
-  }, [typedText, isDeleting, currentStringIndex, typingSpeed]);
+  }, [typedText, isDeleting, currentStringIndex, typingSpeed, strings]);
 
   return (
     <section id="home" className="hero visible">
@@ -43,7 +61,7 @@ const Hero = () => {
             Hi, I'm <span className="teal">Ankit Kumar Srivastava.</span>
           </h1>
           <h5 className="hero-subtitle">
-            A <span className="typing">{typedText || 'Developer'}</span>
+            A <span className="typing">{typedText}<span className="cursor">|</span></span>
           </h5>
           <h5 className="hero-description">
             Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems.

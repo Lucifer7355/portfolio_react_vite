@@ -87,7 +87,45 @@
   color: #fbbf24;
   font-weight: 600;
   display: inline-block;
-  min-width: 200px;
+  min-width: 250px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.typing .cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  color: #fbbf24;
+  font-weight: 300;
+  font-size: 1.1em;
+  vertical-align: baseline;
+}
+
+@keyframes blink {
+  0%, 45% {
+    opacity: 1;
+  }
+  46%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Smooth fade-in for typing text */
+.typing {
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-description {
@@ -309,7 +347,7 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 90vh;
-    padding: 60px 0 40px;
+    padding: 80px 0 40px;
   }
   
   .hero-container {
@@ -318,6 +356,7 @@
   
   .hero-content {
     margin-left: 0;
+    margin-top: 72px;
   }
   
   .hero-title {
@@ -382,6 +421,14 @@
   .hero {
     min-height: 85vh;
     padding: 40px 0 30px;
+  }
+  
+  .hero-container {
+    padding: 0 12px;
+  }
+  
+  .hero-content {
+    margin-top: 60px;
   }
   
   .hero-title {

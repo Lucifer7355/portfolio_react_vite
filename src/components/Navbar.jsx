@@ -93,9 +93,10 @@ const Navbar = () => {
           </button>
           <div className="name-title">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="teal-text" aria-label="Navigate to the home section">
-              Ankit Kumar Srivastava
+              <span className="name-full">Ankit Kumar Srivastava</span>
+              <span className="name-short">Ankit K. Srivastava</span>
             </a>
-            <span className="black-text">Software Developer</span>
+            <span className="black-text subtitle-text">Software Developer</span>
           </div>
         </div>
 
