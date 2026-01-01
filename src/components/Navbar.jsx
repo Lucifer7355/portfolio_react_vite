@@ -39,11 +39,11 @@ const Navbar = () => {
     <>
       <nav className="navbar-desktop hide-on-small-only">
         <ul className="side-nav fixed">
-          <li className="logo">
-            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} aria-label="Navigate to the beginning of the page">
-              <img src="/assets/images/star_performer.jpg" className="profile-pic" alt="Ankit Kumar Srivastava Profile Picture" />
-            </a>
-          </li>
+              <li className="logo">
+                <a href="#home" onClick={(e) => handleNavClick(e, 'home')} aria-label="Navigate to the beginning of the page">
+                  <img src={`${import.meta.env.BASE_URL}assets/images/star_performer.jpg`} className="profile-pic" alt="Ankit Kumar Srivastava Profile Picture" />
+                </a>
+              </li>
           <li className={activeSection === 'about' ? 'active' : ''}>
             <a href="#about" onClick={(e) => handleNavClick(e, 'about')} aria-label="Navigate to About section">
               <i className="fa fa-user"></i><span>About</span>
@@ -74,11 +74,11 @@ const Navbar = () => {
               <i className="fa fa-envelope"></i><span>Contact</span>
             </a>
           </li>
-          <li>
-            <a href="/assets/resume/Ankit_Kumar_Srivastava_Backend_Developer.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Ankit's Resume in a new tab">
-              <i className="fa fa-file-pdf-o"></i><span>Resume</span>
-            </a>
-          </li>
+              <li>
+                <a href={`${import.meta.env.BASE_URL}assets/resume/Ankit_Kumar_Srivastava_Backend_Developer.pdf`} target="_blank" rel="noopener noreferrer" aria-label="Open Ankit's Resume in a new tab">
+                  <i className="fa fa-file-pdf-o"></i><span>Resume</span>
+                </a>
+              </li>
         </ul>
       </nav>
 
@@ -130,11 +130,11 @@ const Navbar = () => {
               <i className="fa fa-envelope"></i><span>Contact</span>
             </a>
           </li>
-          <li>
-            <a href="/assets/resume/Ankit_Kumar_Srivastava_Backend_Developer.pdf" target="_blank" rel="noopener noreferrer" className="teal-text">
-              <i className="fa fa-file-pdf-o"></i><span>Resume</span>
-            </a>
-          </li>
+              <li>
+                <a href={`${import.meta.env.BASE_URL}assets/resume/Ankit_Kumar_Srivastava_Backend_Developer.pdf`} target="_blank" rel="noopener noreferrer" className="teal-text">
+                  <i className="fa fa-file-pdf-o"></i><span>Resume</span>
+                </a>
+              </li>
         </ul>
       </nav>
     </>

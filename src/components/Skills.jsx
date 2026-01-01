@@ -13,16 +13,16 @@ const Skills = () => {
               <div className="skills-content">
                 <h4 className="category-title">{category}</h4>
                 <div className="skills-grid">
-                  {skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="skill-item">
-                      <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        className="skill-icon"
-                      />
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                  ))}
+                      {skills.map((skill, skillIndex) => (
+                        <div key={skillIndex} className="skill-item">
+                          <img
+                            src={skill.icon.startsWith('http') ? skill.icon : `${import.meta.env.BASE_URL}${skill.icon.replace(/^\//, '')}`}
+                            alt={skill.name}
+                            className="skill-icon"
+                          />
+                          <span className="skill-name">{skill.name}</span>
+                        </div>
+                      ))}
                 </div>
               </div>
             </div>

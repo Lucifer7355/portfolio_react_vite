@@ -14,7 +14,7 @@ const Experience = () => {
                 <div className="experience-logo">
                   <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer">
                     <div className="logo-wrapper">
-                      <img src={exp.logo} alt={`${exp.company} logo`} />
+                      <img src={exp.logo.startsWith('http') ? exp.logo : `${import.meta.env.BASE_URL}${exp.logo.replace(/^\//, '')}`} alt={`${exp.company} logo`} />
                     </div>
                   </a>
                 </div>

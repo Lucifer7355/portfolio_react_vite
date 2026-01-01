@@ -57,47 +57,47 @@ const Hero = () => {
           <div className="social">
             <a href="https://www.linkedin.com/in/ankit-software-dev" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn linkedin" aria-label="LinkedIn Profile">
-                <img src="/assets/images/linkedIn.png" alt="LinkedIn" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/linkedIn.png`} alt="LinkedIn" />
               </button>
             </a>
             <a href="https://github.com/Lucifer7355" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn github" aria-label="GitHub Profile">
-                <img src="/assets/images/github_ny.png" alt="GitHub" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/github_ny.png`} alt="GitHub" />
               </button>
             </a>
             <a href="https://medium.com/@@ankitviddya" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn medium" aria-label="Medium Profile">
-                <img src="/assets/images/medium.com.png" alt="Medium" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/medium.com.png`} alt="Medium" />
               </button>
             </a>
             <a href="https://auth.geeksforgeeks.org/user/bytepanic/practice/" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn gfg" aria-label="GeeksforGeeks Profile">
-                <img src="/assets/images/gfg.png" alt="GeeksforGeeks" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/gfg.png`} alt="GeeksforGeeks" />
               </button>
             </a>
             <a href="https://leetcode.com/red_hat7355/" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn leetcode" aria-label="LeetCode Profile">
-                <img src="/assets/images/leetcode.png" alt="LeetCode" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/leetcode.png`} alt="LeetCode" />
               </button>
             </a>
             <a href="https://codeforces.com/profile/noob_programmer8858?f0a28=1" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn codeforces" aria-label="Codeforces Profile">
-                <img src="/assets/images/codeforces.png" alt="Codeforces" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/codeforces.png`} alt="Codeforces" />
               </button>
             </a>
             <a href="https://www.codechef.com/users/go_getter7355" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn codechef" aria-label="CodeChef Profile">
-                <img src="/assets/images/codechef.png" alt="CodeChef" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/codechef.png`} alt="CodeChef" />
               </button>
             </a>
             <a href="https://www.hackerrank.com/ankitviddya?hr_r=1" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn hackerrank" aria-label="HackerRank Profile">
-                <img src="/assets/images/hackerrank.png" alt="HackerRank" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/hackerrank.png`} alt="HackerRank" />
               </button>
             </a>
             <a href="https://www.hackerearth.com/@ankitviddya" target="_blank" rel="noopener noreferrer">
               <button className="icon-btn hackerearth" aria-label="HackerEarth Profile">
-                <img src="/assets/images/HackerEarth_logo.png" alt="HackerEarth" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/HackerEarth_logo.png`} alt="HackerEarth" />
               </button>
             </a>
           </div>
@@ -105,15 +105,15 @@ const Hero = () => {
           <div className="buttons">
             <a href="#about" className="readme">Read More</a>
             <a href="#contact" className="contactme">Contact Me</a>
-            <a 
-              href="/assets/resume/Ankit_Kumar_Srivastava_Backend_Developer.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="resume-btn"
-              download
-            >
-              <i className="fa fa-download"></i> Download Resume
-            </a>
+                <a 
+                  href={`${import.meta.env.BASE_URL}assets/resume/Ankit_Kumar_Srivastava_Backend_Developer.pdf`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="resume-btn"
+                  download
+                >
+                  <i className="fa fa-download"></i> Download Resume
+                </a>
             <hr />
           </div>
 

@@ -15,9 +15,9 @@ const Projects = () => {
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
           {projectsData.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <div key={index} className="project-card">
+                  <div className="project-image">
+                    <img src={project.image.startsWith('http') ? project.image : `${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`} alt={project.title} />
                 <div className="project-overlay" onClick={() => toggleCard(index)}>
                   <i className="fa fa-info-circle"></i>
                 </div>
