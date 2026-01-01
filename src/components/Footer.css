@@ -170,6 +170,12 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 993px) {
+  .footer-bottom {
+    padding-right: 110px;
+  }
+}
+
 .footer-bottom p {
   margin: 0.5rem 0;
   text-align: center;
