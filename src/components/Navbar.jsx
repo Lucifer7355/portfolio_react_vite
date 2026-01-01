@@ -41,7 +41,7 @@ const Navbar = () => {
         <ul className="side-nav fixed">
               <li className="logo">
                 <a href="#home" onClick={(e) => handleNavClick(e, 'home')} aria-label="Navigate to the beginning of the page">
-                  <img src={`${import.meta.env.BASE_URL}assets/images/star_performer.jpg`} className="profile-pic" alt="Ankit Kumar Srivastava Profile Picture" />
+                  <img src={`${import.meta.env.BASE_URL}assets/images/photu.jpg`} className="profile-pic" alt="Ankit Kumar Srivastava Profile Picture" />
                 </a>
               </li>
           <li className={activeSection === 'about' ? 'active' : ''}>

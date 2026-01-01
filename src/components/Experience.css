@@ -215,10 +215,14 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-left: 0;
+    align-items: stretch;
   }
   
   .experience-card {
     min-height: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   
   .experience-content {
@@ -227,49 +231,63 @@
     text-align: center;
     padding: 1.5rem;
     gap: 1rem;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
-  .experience-logo {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .logo-wrapper {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 0.5rem;
+  .experience-details {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .experience-title {
     font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
   }
   
   .experience-role {
     font-size: 0.85rem;
     margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
   }
   
   .experience-tasks {
     text-align: left;
     margin: 0.75rem 0;
+    width: 100%;
+    align-self: flex-start;
   }
   
   .experience-tasks li {
     font-size: 0.9rem;
     padding: 0.625rem 0 0.625rem 1.25rem;
+    text-align: left;
   }
   
   .experience-tech {
     font-size: 0.85rem;
     padding-top: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
   }
   
   .experience-footer {
     padding: 1rem 1.5rem;
+    width: 100%;
+    margin-top: auto;
   }
   
   .experience-date {
     font-size: 0.85rem;
+    text-align: center;
   }
 }
 
@@ -290,9 +308,24 @@
   
   .experience-title {
     font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .experience-role {
+    text-align: center;
+  }
+  
+  .experience-tasks {
+    text-align: left;
+    align-self: flex-start;
   }
   
   .experience-tasks li {
     font-size: 0.85rem;
+    text-align: left;
+  }
+  
+  .experience-tech {
+    text-align: center;
   }
 }

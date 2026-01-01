@@ -160,55 +160,111 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-left: 0;
+    align-items: stretch;
+  }
+  
+  .education-card {
+    min-height: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .education-content {
     padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    width: 100%;
   }
   
   .education-institution {
     font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
   }
   
   .education-location {
     font-size: 0.8rem;
     margin-bottom: 1.25rem;
+    text-align: center;
+    width: 100%;
   }
   
   .education-content p {
     font-size: 0.95rem;
     margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
   }
   
   .education-coursework {
-    margin-top: 1.5rem;
+    margin-top: auto;
     padding-top: 1.25rem;
+    width: 100%;
+    text-align: left;
   }
   
   .education-coursework p {
     font-size: 1rem;
+    text-align: left;
+  }
+  
+  .education-coursework ul {
+    text-align: left;
   }
   
   .education-coursework li {
     font-size: 0.9rem;
     padding: 0.625rem 0 0.625rem 1.25rem;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
+  .education-card {
+    min-height: 420px;
+  }
+  
   .education-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
   }
   
   .education-institution {
     font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .education-location {
+    text-align: center;
+    width: 100%;
   }
   
   .education-content p {
     font-size: 0.9rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .education-coursework {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .education-coursework p {
+    text-align: left;
   }
   
   .education-coursework li {
     font-size: 0.85rem;
+    text-align: left;
   }
 }
