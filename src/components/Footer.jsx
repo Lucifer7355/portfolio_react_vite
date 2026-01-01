@@ -15,11 +15,31 @@ const Footer = () => {
           
           <div className="footer-section">
             <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#skills">Skills</a></li>
+            <ul className="quick-links">
+              <li>
+                <a href="#about">
+                  <i className="fa fa-user"></i>
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience">
+                  <i className="fa fa-briefcase"></i>
+                  <span>Experience</span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects">
+                  <i className="fa fa-folder"></i>
+                  <span>Projects</span>
+                </a>
+              </li>
+              <li>
+                <a href="#skills">
+                  <i className="fa fa-code"></i>
+                  <span>Skills</span>
+                </a>
+              </li>
             </ul>
           </div>
           
